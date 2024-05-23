@@ -15,6 +15,8 @@ const houseRoutes = require('./routes/houses');
 
 app.use('/apartments', apartmentRoutes);
 app.use('/houses', houseRoutes);
+app.use(express.static('public'));
+
 
 app.listen(port, () => {
   console.log(`Server is running on http://localhost:${port}`);
